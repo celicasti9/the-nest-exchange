@@ -1,0 +1,32 @@
+---
+id: 0
+name: Testnet deployment
+network: testnet
+stacks-node: "https://api.testnet.hiro.so"
+bitcoin-node: "http://blockstack:blockstacksystem@bitcoind.testnet.stacks.co:18332"
+plan:
+  batches:
+    - id: 0
+      transactions:
+        - contract-publish:
+            contract-name: mazukamba
+            expected-sender: ST11A7MVPBR27XDWNM7J5NMM6V77GKPPS6YX75365
+            cost: 839370
+            path: "contracts\\mazukamba.clar"
+            anchor-block-only: true
+            clarity-version: 2
+        - contract-publish:
+            contract-name: mazukamba-lp
+            expected-sender: ST11A7MVPBR27XDWNM7J5NMM6V77GKPPS6YX75365
+            cost: 839216
+            path: "contracts\\mazukamba-lp.clar"
+            anchor-block-only: true
+            clarity-version: 2
+        - contract-publish:
+            contract-name: the-nest-exchange
+            expected-sender: ST11A7MVPBR27XDWNM7J5NMM6V77GKPPS6YX75365
+            cost: 840600
+            path: "contracts\\the-nest-exchange.clar"
+            anchor-block-only: true
+            clarity-version: 2
+      epoch: "2.4"
